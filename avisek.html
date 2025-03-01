@@ -4,97 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avisek Jaiswal - Future Millionaire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(45deg, #ff5733, #ffbd33);
-            font-family: Arial, sans-serif;
-            text-align: center;
-            color: white;
+            background: linear-gradient(45deg, #1E3C72, #2A5298);
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            height: 100vh;
+            color: white;
+            text-align: center;
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
-        }
-
-        .container {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px white;
-            width: 80%;
-            max-width: 600px;
+            justify-content: center;
         }
 
         h1 {
-            font-size: 50px;
-            animation: glow 1s infinite alternate;
+            font-size: 70px;
+            font-weight: 600;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            animation: glow 1.5s infinite alternate;
+            margin-top: 50px;
         }
 
         @keyframes glow {
-            from { text-shadow: 0 0 10px white; }
-            to { text-shadow: 0 0 20px yellow; }
+            0% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #ff6a00, 0 0 30px #ff6a00, 0 0 40px #ff6a00;
+            }
+            100% {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff6a00, 0 0 40px #ff6a00, 0 0 50px #ff6a00;
+            }
         }
 
-        .bio {
-            font-size: 18px;
-            margin: 20px 0;
+        .bio-container {
+            margin-top: 50px;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            animation: slideUp 2s ease-out;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
         }
 
-        .animated-text {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffdd57;
-            animation: bounce 2s infinite alternate;
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
-        @keyframes bounce {
-            from { transform: translateY(0); }
-            to { transform: translateY(-10px); }
+        .bio-content {
+            font-size: 22px;
+            line-height: 1.8;
+            font-weight: 400;
+            margin-bottom: 30px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .virat-image, .shiva-image {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border: 5px solid white;
+            margin-top: 30px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .social-links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
         .social-links a {
             display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
             text-decoration: none;
             color: white;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .facebook {
-            background: #1877F2;
-        }
-
-        .instagram {
-            background: #E1306C;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 30px;
+            background-color: rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s, background-color 0.3s;
         }
 
         .social-links a:hover {
-            opacity: 0.8;
             transform: scale(1.1);
+            background-color: rgba(0, 0, 0, 0.6);
         }
+
+        .facebook {
+            background-color: #1877F2;
+        }
+
+        .instagram {
+            background-color: #E1306C;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            font-size: 16px;
+        }
+
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div>
         <h1>🚀 Avisek Jaiswal 🚀</h1>
-        <p class="animated-text">Future Millionaire & Cricket Lover 🏏💰</p>
-        <p class="bio">
-            Hi, I’m Avisek Jaiswal, a passionate student with a big dream – **to become a millionaire**! 💵  
-            I also **love playing cricket** 🏏 and enjoy learning new things.  
-            Hard work, dedication, and smart moves will make my dream a reality!  
-            Follow my journey on social media! 🚀
-        </p>
-        
-        <div class="social-links">
-            <a href="https://www.facebook.com/Abishek.Jaiswal" class="facebook" target="_blank">📘 Facebook</a>
-            <a href="https://www.instagram.com/a_visek_107" class="instagram" target="_blank">📸 Instagram</a>
+
+        <div class="bio-container">
+            <!-- Virat Kohli Image -->
+            <img class="virat-image" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Virat_Kohli_2018.jpg" alt="Virat Kohli">
+
+            <!-- Lord Shiva Image -->
+            <img class="shiva-image" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Shiva_Mural.jpg" alt="Lord Shiva">
+
+            <div class="bio-content">
+                <strong>Welcome to my personal page!</strong><br><br>
+
+                Hi! I'm **Avisek Jaiswal**, an ambitious young individual with a dream to become a **Millionaire**! 💸  
+                I'm passionate about **Cricket**, and I believe in **hard work, perseverance**, and **continuous learning** to reach my goals.  
+                Every day, I'm learning new skills and seeking opportunities to build wealth and success. 🚀
+
+                I am currently a student, exploring different paths and trying to build my personal brand. My interests extend to technology, entrepreneurship, and fitness. 
+
+                I believe that with dedication and the right mindset, anyone can achieve greatness, no matter where they start. Join me on my journey to success, and let's inspire each other!
+
+                Connect with me on my social media profiles below and follow my journey. 🚀
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/Abishek.Jaiswal" class="facebook" target="_blank">📘 Facebook</a>
+                <a href="https://www.instagram.com/a_visek_107" class="instagram" target="_blank">📸 Instagram</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Avisek Jaiswal. All rights reserved.</p>
         </div>
     </div>
 
